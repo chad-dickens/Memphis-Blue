@@ -1,0 +1,70 @@
+body {
+  background-color: transparent;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+#insert-line, #remove-line {
+  font-size: 1.5em;
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+}
+
+#submit_button {
+  font-size: 1.2em;
+}
+
+#form_container {
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(240, 239, 235, 0.95);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#table_row {
+  padding: 0px;
+}
+
+tr {
+  visibility: collapse;
+}
+
+tr:nth-child(1) {
+  visibility: visible;
+}
+
+.input-group-text {
+  width: 100px;
+}
+
+p {
+  text-align: center;
+}
+
+.errorlist {
+  font-size: 14px;
+  color: red;
+  opacity: 0.8;
+}
+
+h4 {
+  text-align: center;
+}
+
+h4 em {
+  color: darkblue;
+}
+
+#order-again {
+  text-align: center;
+  margin: auto;
+}
+
+#summary-list p {
+  margin: 0px;
+}

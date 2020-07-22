@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+{% extends "gift_cards_app/base.html" %}
+{% load static %}
+
+{% block body_block %}
+<h1>Order Gift Cards</h1>
+
+<form method="post">
+
+  <div class="row">
+    <div class="col-md-6 form-group">
+      {{ form.first_name }}
+    </div>
+    <div class="col-md-6 form-group">
+      {{ form.last_name }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      {{ form.first_name.errors }}
+    </div>
+    <div class="col-md-6">
+      {{ form.last_name.errors }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 form-group">
+      {{ form.phone }}
+    </div>
+    <div class="col-md-6 form-group">
+      {{ form.email }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      {{ form.phone.errors }}
+    </div>
+    <div class="col-md-6">
+      {{ form.email.errors }}
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      {{ form.company }}
+    </div>
+  </div>
+
+  {{ form.company.errors }}
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      {{ form.address }}
+    </div>
+  </div>
+
+  {{ form.address.errors }}
+
+  <!-- Adding in values and quantities -->
+
+  <table class='table'>
+
+    <tr>
+      <td id='table_row' class='col-12'>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Value 1</span>
+              </div>
+              {{ form.val_1 }}
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Quantity 1</span>
+              </div>
+              {{ form.qty_1 }}
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td id='table_row' class='col-12'>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Value 2</span>
+              </div>
+              {{ form.val_2 }}
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Quantity 2</span>
+              </div>
+              {{ form.qty_2 }}
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td id='table_row' class='col-12'>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Value 3</span>
+              </div>
+              {{ form.val_3 }}
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Quantity 3</span>
+              </div>
+              {{ form.qty_3 }}
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td id='table_row' class='col-12'>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Value 4</span>
+              </div>
+              {{ form.val_4 }}
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Quantity 4</span>
+              </div>
+              {{ form.qty_4 }}
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td id='table_row' class='col-12'>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Value 5</span>
+              </div>
+              {{ form.val_5 }}
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Quantity 5</span>
+              </div>
+              {{ form.qty_5 }}
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td id='table_row' class='col-12'>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Value 6</span>
+              </div>
+              {{ form.val_6 }}
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Quantity 6</span>
+              </div>
+              {{ form.qty_6 }}
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td id='table_row' class='col-12'>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Value 7</span>
+              </div>
+              {{ form.val_7 }}
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Quantity 7</span>
+              </div>
+              {{ form.qty_7 }}
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td id='table_row' class='col-12'>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Value 8</span>
+              </div>
+              {{ form.val_8 }}
+            </div>
+          </div>
+
+          <div class="col-md-6 form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">Quantity 8</span>
+              </div>
+              {{ form.qty_8 }}
+            </div>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+  </table>
+
+  <!-- Error messages -->
+  <p id='error_message' class='text-secondary'></p>
+
+  <!-- Add and remove buttons -->
+  <div class="row justify-content-center">
+    <button id='insert-line' type="button" class="btn btn-default btn-outline-secondary" aria-label="Left Align">
+      <span aria-hidden="true">+</span>
+    </button>
+    <button id='remove-line' type="button" class="btn btn-default btn-outline-secondary" aria-label="Left Align">
+      <span aria-hidden="true">-</span>
+    </button>
+  </div>
+
+  <!-- Footer secion of form -->
+  <div class="row">
+    <div class='col-md-12'>
+    <h2>Total</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>$<span id='total-amount'>0.00</span> AUD</h3>
+    </div>
+
+    {% csrf_token %}
+    <div class='col-md-6'>
+      <button id='submit_button' class="btn btn-primary" type="submit">Place Order
+      </button>
+    </div>
+  </div>
+
+</form>
+
+{% endblock %}
+
+{% block end_script %}
+<script src="{% static 'gift_cards_app/js/order_form.js' %}"></script>
+{% endblock %}

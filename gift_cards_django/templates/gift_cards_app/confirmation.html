@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "gift_cards_app/base.html" %}
+
+{% block body_block %}
+<h1>Order Confirmed!</h1>
+<h4>Your invoice has been sent to <em>{{ customer_email }}</em></h4>
+<h4>Your order number is <em>{{ customer_order }}</em></h4>
+
+{% load tz %}
+{% get_current_timezone as TIME_ZONE %}
+<p>{{ order_time|localtime }} {{ TIME_ZONE }}</p><br>
+
+<div id='summary-list'>
+  {% for item in order_list %}
+    <p>{{ item }}</p>
+  {% endfor %}
+</div><br>
+
+<h4>Total: {{ order_total }}</h4><br><br>
+
+<div id='order-again'>
+  <a href="{% url 'gift_cards_app:order_form' %}">
+  <button class="btn btn-primary btn-lg" type="button" name="button">Make another order</button>
+  </a>
+</div>
+
+{% endblock %}
